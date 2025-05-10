@@ -1,7 +1,7 @@
 from data import *
 
 class Mob:
-    def __init__(self, path, speed=1.5):
+    def __init__(self, path, speed=1):
         self.path = path
         self.current_point = 0
         self.x, self.y = path[0]

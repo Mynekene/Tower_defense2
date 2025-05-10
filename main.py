@@ -1,7 +1,7 @@
 from function import *
 
 window = pygame.display.set_mode(size_window)
-pygame.display.set_caption("Tower_Defense")
+pygame.display.set_caption("Myne Tower Defense")
 
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 70)
@@ -17,7 +17,7 @@ text_leave = small_font.render("LEAVE", True, BLACK)
 
 wave = 1
 mob_spawn_timer = 0
-mob_spawn_delay = 30 
+mob_spawn_delay = 60
 mob_index = 0
 mobs_per_wave = 5
 current_wave_mobs = []
@@ -28,7 +28,7 @@ while game:
     events = pygame.event.get()
 
     if what_window == "menu":
-        window.fill(BLUE)
+        window.blit(menu_background_image, (0, 0))
         
         pygame.draw.rect(window, GREEN, rect_start)
         pygame.draw.rect(window, RED, rect_end)
